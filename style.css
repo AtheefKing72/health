@@ -1,0 +1,119 @@
+/* style.css */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333; /* Dark gray for better readability */
+}
+
+header {
+    background-color: #f0f0f0; /* Light gray background for header */
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center the navigation links */
+}
+
+nav li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #007bff; /* Blue color for links */
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h1, h2, h3 {
+    color: #2c3e50; /* Darker color for headings */
+}
+
+.article {
+    margin-bottom: 2rem; /* Space between articles */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Make images responsive */
+    margin: 1rem auto; /* Center images */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+#social-buttons {
+    margin-top: 1rem; /* Space above social buttons */
+}
+
+#social-buttons button {
+    margin: 0 0.5rem; /* Space between buttons */
+    padding: 0.5rem 1rem; /* Padding for buttons */
+}
+
+/* Responsive Design - Example */
+@media (max-width: 768px) {
+    nav li {
+        display: block; /* Stack navigation links vertically on smaller screens */
+        margin: 0.5rem 0;
+    }
+/* ... other styles ... */
+
+#social-interactions {
+    margin-top: 2rem;
+}
+
+#comment-section {
+    margin-bottom: 1rem; /* Space between comments and share buttons */
+}
+
+#comment-list {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px; /* Space below comment list */
+    max-height: 200px;  /* Set a maximum height */
+    overflow-y: auto;  /* Add a scrollbar if needed */
+}
+
+#comment-form textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+#social-buttons {
+    text-align: center;
+}
+
+#social-buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#social-buttons button:hover {
+    background-color: #45a049;
+}
+
+/* ... other styles ... */}
