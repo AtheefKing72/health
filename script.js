@@ -1,41 +1,25 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // ... (Smooth scrolling code if you have it) ...
+const webShareButton = document.getElementById('web-share-button');
 
-    const commentList = document.getElementById('comment-list');
-    const commentForm = document.getElementById('comment-form');
-    const newComment = document.getElementById('new-comment');
-    const shareButton = document.getElementById('share-button');
-
-    commentForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const commentText = newComment.value.trim();
-        if (commentText !== "") {
-            const commentDiv = document.createElement('div');
-            commentDiv.textContent = commentText;
-            commentList.appendChild(commentDiv);
-            newComment.value = ""; // Clear the textarea
-        }
-    });
-
-    shareButton.addEventListener('click', () => {
-        const shareText = "Check out this great content on Your Health Hub!"; // Customize
-        const shareUrl = window.location.href;
-
-        if (navigator.share) {
-            navigator.share({
-                title: document.title,
-                text: shareText,
-                url: shareUrl
-            }).then(() => {
-                console.log('Shared successfully!');
-            }).catch((error) => {
-                console.error('Error sharing:', error);
+if (navigator.share) {
+    // Web Share API IS supported, show the button and add the event listener:
+    webShareButton.style.display = 'inline-block'; // Or just leave it as its default display
+    webShareButton.addEventListener('click', async () => {
+        try {
+            await navigator.share({
+                title: 'Your Health Hub',
+                url: 'YOUR_WEBSITE_URL',
+                text: 'Your path to a healthier you starts here.'
             });
-        } else {
-            // Simplified share (just shows the text)
-            alert(shareText + "\n" + shareUrl);
+            console.log('Successfully shared');
+        } catch (error) {
+            console.log('Error sharing', error);
+            alert("Sharing failed. Please try again."); // User-friendly message
         }
     });
-
-    // ... any other JavaScript code ...
-});
+} else {
+    // Web Share API is NOT supported, hide the button or provide a fallback:
+    webShareButton.style.display = 'none'; // Hide the button
+    console.log("Web Share API not supported.");
+    // You could add a fallback here, like a simplified share link or instructions
+    // for manually copying the URL.
+}

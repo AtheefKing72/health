@@ -59,14 +59,35 @@ footer {
     text-align: center;
 }
 
-#social-buttons {
-    margin-top: 1rem; /* Space above social buttons */
+/* Social Share Buttons */
+.social-share {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the share buttons */
 }
 
-#social-buttons button {
-    margin: 0 0.5rem; /* Space between buttons */
-    padding: 0.5rem 1rem; /* Padding for buttons */
+.social-share h3 {
+    margin-right: 10px;
+    color: green; /* Green heading */
 }
+
+.social-share a, .social-share button {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+    color: green; /* Green icons */
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.social-share a:hover, .social-share button:hover {
+    color: darkgreen; /* Darker green on hover */
+}
+
 
 /* Responsive Design - Example */
 @media (max-width: 768px) {
@@ -74,8 +95,36 @@ footer {
         display: block; /* Stack navigation links vertically on smaller screens */
         margin: 0.5rem 0;
     }
-/* ... other styles ... */
+}
 
+
+/* Dark theme styles */
+body.dark-theme {
+    background-color: #333;
+    color: #eee;
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3 {
+    color: #fff;
+}
+
+/* Example Menu/Settings Styles (if you have these elements) */
+.menu-options {
+    width: 200px; /* Or whatever width you want */
+}
+
+#settings-panel {
+    padding: 10px;
+}
+
+#settings-panel label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Comment Section Styles (If you have this section) */
 #social-interactions {
     margin-top: 2rem;
 }
@@ -97,23 +146,3 @@ footer {
     padding: 5px;
     border: 1px solid #ccc;
 }
-
-#social-buttons {
-    text-align: center;
-}
-
-#social-buttons button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-#social-buttons button:hover {
-    background-color: #45a049;
-}
-
-/* ... other styles ... */}
