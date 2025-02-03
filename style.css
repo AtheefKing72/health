@@ -1,62 +1,91 @@
-/* style.css */
+/* General Page Styling */
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #333; /* Dark gray for better readability */
+    font-family: "Poppins", Arial, sans-serif;
+    color: #2c3e50; /* Dark gray for best readability */
+    background-color: #ffffff; /* Pure white background for clarity */
+    font-size: 18px;
+    line-height: 1.7;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+/* Header */
 header {
-    background-color: #f0f0f0; /* Light gray background for header */
-    padding: 1rem 0;
+    background-color: #007bff; /* Stronger blue */
+    padding: 15px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-nav ul {
-    list-style: none;
+/* Navigation Menu */
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0056b3; /* Darker blue for better contrast */
+    padding: 10px;
+}
+
+.menu-links {
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    text-align: center; /* Center the navigation links */
+    display: flex;
 }
 
-nav li {
-    display: inline;
-    margin: 0 1rem;
+.menu-links li {
+    margin-right: 20px;
 }
 
-nav a {
+.menu-links li a {
     text-decoration: none;
-    color: #007bff; /* Blue color for links */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-main {
-    padding: 2rem;
+.hamburger-menu {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
 }
 
-section {
-    margin-bottom: 2rem;
-}
-
+/* Headings */
 h1, h2, h3 {
-    color: #2c3e50; /* Darker color for headings */
+    color: #007bff; /* Vibrant blue for attraction */
+    font-weight: bold;
 }
 
-.article {
-    margin-bottom: 2rem; /* Space between articles */
+h1 {
+    font-size: 30px;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block; /* Make images responsive */
-    margin: 1rem auto; /* Center images */
+h2 {
+    font-size: 26px;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+h3 {
+    font-size: 22px;
+}
+
+/* Paragraphs */
+p {
+    color: #5a7798; /* Clear dark gray */
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
 }
 
 /* Social Share Buttons */
@@ -64,85 +93,151 @@ footer {
     margin-top: 20px;
     display: flex;
     align-items: center;
-    justify-content: center; /* Center the share buttons */
+    justify-content: center;
 }
 
 .social-share h3 {
     margin-right: 10px;
-    color: green; /* Green heading */
+    color: green;
 }
 
 .social-share a, .social-share button {
     display: inline-block;
     margin-right: 10px;
     font-size: 20px;
-    color: green; /* Green icons */
+    color: green;
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
-    transition: color 0.3s ease; /* Smooth color transition */
+    transition: color 0.3s ease;
 }
 
 .social-share a:hover, .social-share button:hover {
-    color: darkgreen; /* Darker green on hover */
+    color: darkgreen;
 }
 
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 5px;
+}
 
-/* Responsive Design - Example */
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Mobile Navigation */
 @media (max-width: 768px) {
-    nav li {
-        display: block; /* Stack navigation links vertically on smaller screens */
-        margin: 0.5rem 0;
+    .menu-links {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #007bff;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .menu-links li {
+        margin: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .menu-links.show {
+        display: block;
     }
 }
 
-
-/* Dark theme styles */
+/* Dark Mode - Better Readability */
 body.dark-theme {
-    background-color: #333;
-    color: #eee;
+    background-color: #1e1e1e;
+    color: #f8f9fa;
 }
 
-body.dark-theme h1,
-body.dark-theme h2,
+body.dark-theme h1, 
+body.dark-theme h2, 
 body.dark-theme h3 {
-    color: #fff;
+    color: #1abc9c; /* Soft green for easy reading */
 }
 
-/* Example Menu/Settings Styles (if you have these elements) */
-.menu-options {
-    width: 200px; /* Or whatever width you want */
+body.dark-theme p {
+    color: #dcdcdc;
 }
 
-#settings-panel {
-    padding: 10px;
+body.dark-theme a {
+    color: #f39c12;
 }
 
-#settings-panel label {
-    display: block;
-    margin-bottom: 5px;
+body.dark-theme a:hover {
+    color: #e67e22;
 }
 
-/* Comment Section Styles (If you have this section) */
-#social-interactions {
-    margin-top: 2rem;
-}
-
-#comment-section {
-    margin-bottom: 1rem; /* Space between comments and share buttons */
-}
-
+/* Comment Section */
 #comment-list {
     border: 1px solid #ccc;
     padding: 10px;
-    margin-bottom: 10px; /* Space below comment list */
-    max-height: 200px;  /* Set a maximum height */
-    overflow-y: auto;  /* Add a scrollbar if needed */
+    margin-bottom: 10px;
+    max-height: 200px;
+    overflow-y: auto;
 }
 
 #comment-form textarea {
     width: 100%;
     padding: 5px;
     border: 1px solid #ccc;
+}
+
+/* Back Button */
+.back-arrow {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.back-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.back-arrow i {
+    margin-right: 5px;
+}
+
+.back-arrow span {
+    font-size: 16px;
+}
+
+/* Web Share Button */
+#web-share-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#web-share-button:hover {
+    background-color: #0056b3;
 }
