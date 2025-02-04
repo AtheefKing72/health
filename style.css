@@ -18,6 +18,10 @@ header {
     text-align: center;
     font-size: 24px;
     font-weight: bold;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 /* Navigation Menu */
@@ -98,7 +102,7 @@ h3 {
     font-size: 22px;
 }
 
-/* Paragraph Styling - Different Colors for Inspiration */
+/* Paragraph Styling */
 p {
     font-size: 18px;
     line-height: 1.8;
@@ -120,6 +124,36 @@ p:nth-child(odd) {
 p:nth-child(even) {
     color: #d35400;
     background: linear-gradient(to right, #fff8e1, #ffecb3);
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    header {
+        font-size: 22px;
+        padding: 12px;
+    }
+
+    .content-section {
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+        padding: 12px;
+    }
 }
 
 /* Dark Mode Styling */
@@ -249,27 +283,4 @@ footer {
 
 #web-share-button:hover {
     background-color: #0056b3;
-}
-
-/* Mobile Responsive Tweaks */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 26px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    .social-share {
-        flex-direction: column;
-    }
-
-    .social-share h3 {
-        margin-bottom: 10px;
-    }
 }
