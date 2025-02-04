@@ -13,27 +13,30 @@
 <body>
     <header>
         <nav>
-                <!-- Menu Links -->
-                <ul id="menu-links" class="menu-links">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="nutrition.html">Nutrition</a></li>
-                    <li><a href="fitness.html">Fitness</a></li>
-                    <li><a href="mental-health.html">Mental Health</a></li>
-                    <li><a href="sleep-health.html">Sleep Health</a></li>
-                    <li><a href="weight-management.html">Weight Management</a></li>
-                    <li><a href="disease-prevention.html">Disease Prevention</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+            <!-- Hamburger Menu (Visible on Mobile) -->
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
             </div>
-           
-            </div>
+
+            <!-- Menu Links -->
+            <ul id="menu-links" class="menu-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="nutrition.html">Nutrition</a></li>
+                <li><a href="fitness.html">Fitness</a></li>
+                <li><a href="mental-health.html">Mental Health</a></li>
+                <li><a href="sleep-health.html">Sleep Health</a></li>
+                <li><a href="weight-management.html">Weight Management</a></li>
+                <li><a href="disease-prevention.html">Disease Prevention</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
         <section id="home">
-            <center><h1>Welcome to Your Health Hub</h1></center>
+            <h1>Welcome to Your Health Hub</h1>
+
             <p>In today's fast-paced world, prioritizing your health can often feel like a daunting task. Between work, family, and social commitments, it's easy to let healthy habits slip by the wayside. But at Your Health Hub, we believe that a healthy lifestyle is within everyone's reach. We're dedicated to providing you with reliable, evidence-based information and practical tips to help you navigate the world of health and wellness. Our goal is to empower you to make informed decisions about your well-being, so you can live a longer, healthier, and happier life.</p>
 
             <p>Explore our comprehensive resources covering a wide range of topics, from nutrition and fitness to mental health, sleep hygiene, weight management, and disease prevention. Whether you're looking to make small changes or embark on a complete health transformation, we're here to support you every step of the way. Our articles are written by health enthusiasts and reviewed by experts to ensure accuracy and clarity. We strive to present complex medical information in a clear and accessible way, so you can easily understand and apply it to your own life.</p>
@@ -42,13 +45,14 @@
 
             <p>Start exploring today and discover the path to a healthier you!</p>
 
+            <!-- Responsive Images -->
             <div class="image-container">
-                <img src="https://images.unsplash.com/photo-1494390248081-4e521a5940db?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGVhbHRoJTIwaHVifGVufDB8fDB8fHww" alt="Health Hub" width="350">
+                <img src="https://images.unsplash.com/photo-1494390248081-4e521a5940db?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGVhbHRoJTIwaHVifGVufDB8fDB8fHww" alt="Health Hub">
                 <br>
-                <img src="https://media.istockphoto.com/id/2153823097/photo/cheerful-athletic-couple-jogging-through-the-park.webp?a=1&b=1&s=612x612&w=0&k=20&c=Dgek5mkdH-efVtFv4bJUVuiiNnb8-k9fTSlK-uS4anQ=" alt="Running" width="300">
+                <img src="https://media.istockphoto.com/id/2153823097/photo/cheerful-athletic-couple-jogging-through-the-park.webp?a=1&b=1&s=612x612&w=0&k=20&c=Dgek5mkdH-efVtFv4bJUVuiiNnb8-k9fTSlK-uS4anQ=" alt="Running">
             </div>
-              <br>
-              <br>
+
+            <!-- Social Share Section -->
             <div class="social-share">
                 <h3>Share this page:</h3>
                 <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -66,6 +70,12 @@
         <p>&copy; 2025 Your Health Hub. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Toggle Mobile Navigation
+        function toggleMenu() {
+            var menu = document.getElementById("menu-links");
+            menu.classList.toggle("show");
+        }
+    </script>
 </body>
 </html>
