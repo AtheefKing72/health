@@ -30,21 +30,27 @@ nav {
     padding: 10px;
     display: flex;
     justify-content: center;
+    max-width: 1200px; /* Limit the width */
+    margin: 0 auto; /* Center the navigation */
 }
 
+/* Menu Links Styling */
 .menu-links {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+    max-width: 1200px; /* Ensure it's centered and doesn't stretch too wide */
 }
 
+/* Menu List Items */
 .menu-links li {
     margin: 10px;
 }
 
+/* Menu Link Styling */
 .menu-links li a {
     text-decoration: none;
     color: white;
